@@ -1,3 +1,8 @@
+- name: Run tests
+  run: |
+    python -m pytest -v
+
+
 name: Sonar
 on:
   workflow_dispatch:

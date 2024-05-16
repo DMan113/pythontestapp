@@ -1,0 +1,26 @@
+project:
+  xmlns: http://maven.apache.org/POM/4.0.0
+  xmlns:xsi: http://www.w3.org/2001/XMLSchema-instance
+  xsi:schemaLocation: http://maven.apache.org/POM/4.0.0
+                      http://maven.apache.org/xsd/maven-4.0.0.xsd
+  modelVersion: 4.0.0
+  groupId: com.example
+  artifactId: pythontestapp
+  version: 1.0-SNAPSHOT
+  dependencies:
+    - groupId: com.google.protobuf
+      artifactId: protobuf-java
+      version: 2.5.0
+  build:
+    plugins:
+      - groupId: org.apache.maven.plugins
+        artifactId: maven-compiler-plugin
+        version: 3.8.1
+        configuration:
+          source: 17
+          target: 17
+      - groupId: org.sonarsource.sonar-packaging-maven-plugin
+        artifactId: sonar-packaging-maven-plugin
+        version: 1.0
+        configuration:
+          requirePlugins: python:2.0-SNAPSHOT
